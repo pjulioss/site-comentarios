@@ -11,7 +11,7 @@
     <nav>
         <ul>
             <li>
-                <a href="#">Discursões</a>
+                <a href="discussao.php">Discursões</a>
             </li>
             <li>
                 <a href="#">Entrar</a>

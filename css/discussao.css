@@ -1,0 +1,119 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: arial;
+    background-color: rgba(245, 245, 241, 0.938);
+}
+
+
+.container{
+    width: 70%;
+    margin: auto;
+
+}
+
+
+/* Menu */
+
+nav{
+    background-color: #44A1A0;
+    height: 60px;
+}
+
+ul{
+    list-style: none;
+    float: right;
+    margin-right: 100px;
+}
+
+li {
+    display: inline-block;
+    line-height: 60px;
+    padding: 0px 10px;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+li a:hover{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+/*Titulo artigo*/
+h1{
+    padding: 40px 0px 20px 0px;
+    font-size: 20pt;
+    line-height: 40px;
+}
+
+
+
+/*Conteudo*/
+
+section{
+    width: 60%;
+}
+
+section>img{
+    width: 100%;
+}
+
+p.txt {
+    font-size: 13pt;
+    color:#686868;
+    line-height: 30px;
+    margin: 20px 0px;
+    font-family: 'Microsoft YaHei Light';
+}
+
+/* Formulario de comentario */
+form img{
+    width: 50px;
+    display: block;
+    float: left;
+    padding: 10px 5px;
+}
+
+h2 {
+    font-family: 'Microsoft YaHei Light';
+    color:#686868;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    height: 100px;
+    width: 80%;
+    border: none;
+    padding: 7px;
+    margin: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    display: block;
+    float: left;
+    font-size: 13pt;
+}
+
+input[type=submit]{
+    font-family: 'Arial';
+    width: 150px;
+    height: 30px;
+    background-color:rgba(245, 245, 241, 0.938);;
+    border: 2px solid #44A1A0;
+    color: #44A1A0;
+    cursor: pointer;
+    display: block;
+    float: right;
+    margin-right: 30px;
+}
+
+input[type=submit]:hover{
+    background-color: #44A1A0;
+    color: rgba(245, 245, 241, 0.938);
+}
