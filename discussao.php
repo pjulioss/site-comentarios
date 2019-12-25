@@ -29,17 +29,48 @@
             <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem neque ratione quo quaerat possimus corrupti provident amet aliquid, temporibus officiis.</p>
             <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores ex doloribus nihil non sequi adipisci expedita corrupti dolores facilis enim doloremque, iure magnam porro alias ipsum illo labore minus maiores laborum impedit, deleniti quidem? Iste labore quaerat pariatur sapiente, quam maxime distinctio ullam, fuga consequuntur quis similique soluta asperiores?</p>
 
-        </section>
+            <!-- Area dos comentarios -->
 
-        <section>
             <h2>Deixe seu comentário</h2>
             <form method="POST">
                 <img src="img/perfil.png" alt="perfil">
                 <textarea name="texto" placeholder="Participe da discursão..."></textarea>
                 <input type="submit" value="Comentar">
             </form>
+            <div class="area-comentario">
+                <img src="img/perfil.png">
+                <h3>Fulaninho</h3>
+                <h4>Hora / Data <a href="#">Excluir</a></h4>
+                <p>Comentario de Fulano</p>
+            </div>
+            <div class="area-comentario">
+                <img src="img/perfil.png">
+                <h3>Zezinho</h3>
+                <h4>Hora / Data <a href="#">Excluir</a></h4>
+                <p>Comentario de Zezinho</p>
+            </div>
+            <div class="area-comentario">
+                <img src="img/perfil.png">
+                <h3>Fofoquilda</h3>
+                <h4>Hora / Data <a href="#">Excluir</a></h4>
+                <p>Comentario de Fofoquilda</p>
+            </div>
         </section>
-    </div>
-    
+
+        <section id="conteudo1">
+            <div>
+                <img src="img/imagem.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui facere alias unde consequatur assumenda vel aspernatur, et excepturi laboriosam atque suscipit harum deserunt blanditiis eveniet repellat tenetur incidunt sequi soluta.</p>
+            </div>
+        </section>
+
+        <section id="conteudo2">
+            <div>
+                <h5>Titulo Qualquer</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam rerum voluptatibus modi, dolore nam officiis velit vero sunt vel culpa quas reiciendis hic sit optio accusamus qui quia neque provident, eaque dolores impedit alias maiores?</p>
+
+            </div>
+        </section>
+    </div><!-- fim do container -->
 </body>
 </html>

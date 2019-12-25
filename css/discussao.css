@@ -58,6 +58,8 @@ h1{
 
 section{
     width: 60%;
+    box-sizing: border-box;
+    float: left;
 }
 
 section>img{
@@ -116,4 +118,84 @@ input[type=submit]{
 input[type=submit]:hover{
     background-color: #44A1A0;
     color: rgba(245, 245, 241, 0.938);
+}
+
+/* ------- Area de Comentario ------------ */
+
+.area-comentario{
+    box-sizing: border-box;
+    border-bottom: #686868 1px solid;
+    clear: both;
+    padding: 10px;
+}
+
+.area-comentario img{
+    width: 50px;
+    float: left;
+    padding-right: 10px;
+}
+
+.area-comentario h3 {
+    float: left;
+    color: rgb(0, 139, 120);
+    font-size: 12pt;
+    padding: 5px 10px 5px 0px;
+}
+
+.area-comentario h4 {
+    font-size: 10pt;
+    color: rgb(0,0,0, .6);
+    line-height: 30px;
+}
+
+.area-comentario h4 a{
+    color: #000;
+    text-decoration: none;
+}
+
+.area-comentario h4 a:hover{
+    text-decoration: underline;
+}
+
+.area-comentario p{
+    line-height: 25px;
+}
+
+/*----------------Conteudo Lateral------------------*/
+
+section#conteudo1, section#conteudo2{
+    width: 40%;
+    box-sizing: border-box;
+    float: right;
+}
+
+#conteudo1 div, #conteudo2 div{
+    width: 70%;
+    background-color: rgba(0, 0, 0, .02);
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 40px 20px;
+    margin: 40px auto;
+}
+
+#conteudo1 img{
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+#conteudo1 p, #conteudo2 p{
+    width: 90%;
+    font-family: "Microsoft YaHei Light";
+    color: #686868;
+    line-height: 20px;
+    text-align: center;
+    margin: 20px auto;
+
+}
+
+#conteudo2 h5{
+    font-family: "Microsoft Yahei Light";
+    color: #686868;
+    text-align: center;
+    font-size: 15pt;
 }
