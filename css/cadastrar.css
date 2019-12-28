@@ -1,0 +1,72 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../img/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+form {
+    width: 350px;
+    margin: 60px auto;
+    background-color: rgba(245, 245, 241, 0.938);
+    padding: 30px;
+}
+
+input {
+    display: block;
+    float: left;
+    width: 95%;
+    height: 20px;
+    font-size: 11pt;
+    padding: 5px;
+    margin-bottom: 10px;
+    outline:none;
+}
+
+h1 {
+    font-size: 15pt;
+    padding: 10px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: rgba(39, 136, 115, 0.192);
+}
+
+input[type=submit]{
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    background-color:rgba(245, 245, 241, 0.938);;
+    border: 2px solid #44A1A0;
+    color: #44A1A0;
+    float: right;
+
+}
+
+input[type=submit]:hover{
+    background-color: #44A1A0;
+    color: rgba(245, 245, 241, 0.938);
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    clear: both;
+    color: rgb(41, 116, 114);
+    padding-top: 20px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}

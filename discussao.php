@@ -14,7 +14,7 @@
                 <a href="index.php">Inicio</a>
             </li>
             <li>
-                <a href="#">Entrar</a>
+                <a href="entrar.php">Entrar</a>
             </li>
         </ul>
     </nav>
