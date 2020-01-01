@@ -10,12 +10,9 @@
 <body>
     <nav>
         <ul>
-            <li>
-                <a href="discussao.php">Discursões</a>
-            </li>
-            <li>
-                <a href="entrar.php">Entrar</a>
-            </li>
+            <li><a href="discussao.php">Discursões</a></li>
+            <li><a href="entrar.php">Entrar</a></li>
+            <li><a href="dados.php">Dados</a></li>
         </ul>
 
     </nav>

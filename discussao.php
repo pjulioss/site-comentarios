@@ -10,12 +10,9 @@
 <body>
     <nav>
         <ul>
-            <li>
-                <a href="index.php">Inicio</a>
-            </li>
-            <li>
-                <a href="entrar.php">Entrar</a>
-            </li>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="entrar.php">Entrar</a></li>
+            <li><a href="dados.php">Dados</a></li>
         </ul>
     </nav>
 
