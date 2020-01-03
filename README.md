@@ -1,2 +1,2 @@
 # site-comentarios
-Sistema de comentários com permissão de usuário
+Blog de exemplo para crud de comentários com permissão de usuário
