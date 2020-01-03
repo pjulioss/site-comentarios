@@ -12,7 +12,6 @@
         <ul>
             <li><a href="index.php">Inicio</a></li>
             <li><a href="entrar.php">Entrar</a></li>
-            <li><a href="dados.php">Dados</a></li>
         </ul>
     </nav>
 
@@ -31,7 +30,7 @@
             <h2>Deixe seu comentário</h2>
             <form method="POST">
                 <img src="img/perfil.png" alt="perfil">
-                <textarea name="texto" placeholder="Participe da discursão..."></textarea>
+                <textarea name="texto" placeholder="Participe da discursão..." maxlength="400"></textarea>
                 <input type="submit" value="Comentar">
             </form>
             <div class="area-comentario">

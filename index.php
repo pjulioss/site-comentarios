@@ -1,3 +1,21 @@
+<?php 
+    require_once "Classes/Usuarios.php";
+    session_start();
+    if(isset($_SESSION['id_usuario']))
+    {
+        $use = new Usuarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+        $infoUsuario = $use->buscarDadosUser($_SESSION['id_usuario']);
+        
+    } elseif(isset($_SESSION['id_master'])) 
+    {
+        $use = new Usuarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+        $infoUsuario = $use->buscarDadosUser($_SESSION['id_master']);
+
+    }
+
+
+;?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +28,37 @@
 <body>
     <nav>
         <ul>
+            <?php 
+                if(isset($_SESSION['id_master']))
+                { ?>
+                    <li><a href="dados.php">Dados</a></li>
+            <?php }; ?>
+            
             <li><a href="discussao.php">Discursões</a></li>
-            <li><a href="entrar.php">Entrar</a></li>
-            <li><a href="dados.php">Dados</a></li>
+            <?php 
+                if(isset($infoUsuario))
+                { ?>
+                    <li><a href="sair.php">Sair</a></li>
+               <?php } else { ?>
+                    <li><a href="entrar.php">Entrar</a></li>
+                <?php } ?>
+
         </ul>
 
     </nav>
     <h3>Conteúdo Qualquer</h3>
+    <!-- Sessões -->
+<?php 
+    if(isset($_SESSION['id_master'])|| isset($_SESSION['id_usuario']))
+    { ?>
+        <h2>
+            <?= "Seja bem vindo(a), " . $infoUsuario['nome'] ; ?>
+        </h2>
+<?php }
+
+; ?>
+    
+
 </body>
 </html>
+

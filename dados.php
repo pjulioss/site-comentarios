@@ -11,7 +11,6 @@
     <nav>
         <ul>
             <li><a href="index.php">Inicio</a> </li>
-            <li><a href="entrar.php">Entrar</a></li>
             <li><a href="discussao.php">Discussão</a></li>
         </ul>
     </nav>

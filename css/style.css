@@ -12,7 +12,9 @@ h3 {
     font-size: 40pt;
     padding: 70px;
 }
-
+h2{
+    padding: 10px 70px;
+}
 /* Menu */
 
 nav{
