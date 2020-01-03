@@ -34,8 +34,8 @@ if(isset($_POST['email']))
     if($use->entrar($email, $senha))
     {
         header("location:index.php");//usuario logou
-    } else {
-        echo "Usuário ou senha incorretos, verifique os dados e tente novamente.";
-
+    } else { ?>
+         <div class="msgErro">Usuário ou senha incorretos, verifique os dados e tente novamente.</div>
+<?php
     }
 }

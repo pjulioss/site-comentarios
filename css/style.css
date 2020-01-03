@@ -12,8 +12,11 @@ h3 {
     font-size: 40pt;
     padding: 70px;
 }
-h2{
-    padding: 10px 70px;
+
+h2 {
+    font-size: 35px;
+    padding: 50px;
+    font-weight: normal;
 }
 /* Menu */
 

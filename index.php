@@ -46,17 +46,17 @@
         </ul>
 
     </nav>
-    <h3>Conteúdo Qualquer</h3>
     <!-- Sessões -->
-<?php 
+    <?php 
     if(isset($_SESSION['id_master'])|| isset($_SESSION['id_usuario']))
     { ?>
         <h2>
             <?= "Seja bem vindo(a), " . $infoUsuario['nome'] ; ?>
         </h2>
-<?php }
+        <?php }
 
 ; ?>
+    <h3>Conteúdo Qualquer</h3>
     
 
 </body>

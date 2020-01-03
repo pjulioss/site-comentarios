@@ -38,14 +38,18 @@ if(isset($_POST['nome']))
     {
         $use = new Usuarios("site_comentarios", "localhost","root", "" );
         if($use->cadastrar($nome, $email, $senha))
-        {
-            echo "Cadastro feito com sucesso!";
-        } else {
-            echo "O email já existe!";
-        }
-    } else {
-        echo "As duas senhas não conferem!";
-    }
+        { ?>
+             <div class="msgOk">
+                 Cadastro feito com sucesso!
+                 <a href="entrar.php">Clique aqui para acessar sua conta!</a>
+            
+            </div>
+<?php       } else { ?>
+             <div class="msgErro">O email já existe!</div>
+<?php        } ?>
+<?php    } else { ?>
+           <div class="msgErro">As duas senhas não conferem!</div>
+<?php    } 
 }
 
 
