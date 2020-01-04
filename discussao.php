@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    require_once "Classes/Comentarios.php";
+    $com = new Comentarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+    $coments = $com->buscarComentarios();
+; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +18,17 @@
     <nav>
         <ul>
             <li><a href="index.php">Inicio</a></li>
-            <li><a href="entrar.php">Entrar</a></li>
+            <?php
+                if(isset($_SESSION['id_master']))
+                { ?>
+                    <li><a href="dados.php">Dados</a></li>
+               <?php }
+                if(isset($_SESSION['id_usuario']) || isset($_SESSION['id_master']))
+                { ?>
+                    <li><a href="sair.php">Sair</a></li>
+            <?php } else { ?>
+                    <li><a href="entrar.php">Entrar</a></li>
+            <?php } ;?>
         </ul>
     </nav>
 
@@ -33,24 +50,33 @@
                 <textarea name="texto" placeholder="Participe da discursão..." maxlength="400"></textarea>
                 <input type="submit" value="Comentar">
             </form>
-            <div class="area-comentario">
-                <img src="img/perfil.png">
-                <h3>Fulaninho</h3>
-                <h4>Hora / Data <a href="#">Excluir</a></h4>
-                <p>Comentario de Fulano</p>
-            </div>
-            <div class="area-comentario">
-                <img src="img/perfil.png">
-                <h3>Zezinho</h3>
-                <h4>Hora / Data <a href="#">Excluir</a></h4>
-                <p>Comentario de Zezinho</p>
-            </div>
-            <div class="area-comentario">
-                <img src="img/perfil.png">
-                <h3>Fofoquilda</h3>
-                <h4>Hora / Data <a href="#">Excluir</a></h4>
-                <p>Comentario de Fofoquilda</p>
-            </div>
+
+            <!-- Mostrando os comentarios do banco de dados -->
+            <?php 
+                if(count($coments)> 0)
+                {
+                    foreach($coments as $value)
+                    { ?>
+                        <div class="area-comentario">
+                            <img src="img/perfil.png">
+                            <h3> <?=$value['nome_pessoa'] ?> </h3>
+                            <h4> 
+                                <?php 
+                                    $data = new DateTime($value['dia']);
+                                    echo $data->format('d/m/Y');
+                                    echo " - ";
+                                    echo $value['horario'];
+                                ?><a href="#"> Excluir</a>
+                            </h4>
+                            <p><?= $value['comentarios']?></p>
+                        </div> 
+                <?php    }
+                } else {
+                    echo "Sem comentários";
+                }
+            ; ?>
+            
+
         </section>
 
         <section id="conteudo1">
