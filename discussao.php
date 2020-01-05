@@ -66,7 +66,19 @@
                                     echo $data->format('d/m/Y');
                                     echo " - ";
                                     echo $value['horario'];
-                                ?><a href="#"> Excluir</a>
+                                ?>
+                                <?php 
+                                // mostrando o botão excluir apenas para o admin e para quem comentou
+                                    if(isset($_SESSION['id_usuario']))
+                                    {
+                                        if($_SESSION['id_usuario'] == $value['fk_id_usuario'])
+                                        { ;?>
+                                            <a href="discussao.php?id_exc=<?php echo $value['id'];?>"> Excluir</a>
+                                    <?php }
+                                    } elseif(isset($_SESSION['id_master'])) 
+                                    { ;?>
+                                        <a href="discussao.php?id_exc=<?php echo $value['id'];?>"> Excluir</a>
+                            <?php   } ;?>
                             </h4>
                             <p><?= $value['comentarios']?></p>
                         </div> 
@@ -96,3 +108,23 @@
     </div><!-- fim do container -->
 </body>
 </html>
+
+<!-- Fazendo a exlusão do comentario -->
+<?php 
+
+if(isset($_GET['id_exc']))
+{
+    $id_e = addslashes($_GET['id_exc']);
+
+    if(isset($_SESSION['id_master']))
+    {
+        $com->excluirComentario($id_e, $_SESSION['id_master']);
+
+    } elseif(isset($_SESSION['id_usuario']))
+    {
+        $com->excluirComentario($id_e, $_SESSION['id_usuario']);
+    }
+    header("location: discussao.php");
+}
+
+; ?>

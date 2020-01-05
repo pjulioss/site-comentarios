@@ -24,6 +24,22 @@ class Comentarios
         return $dados;
         //id, comentario, dia, hora, (nome_pessoa)
     }
+
+    public function excluirComentario($id_comentario, $id_usuario)
+    {
+        if($id_usuario == 1)
+        {
+            $cmd = $this->pdo->prepare("DELETE FROM comentarios WHERE id = :id_com");
+            $cmd->bindValue(":id_com", $id_comentario);
+            $cmd->execute();
+        } else {
+            $cmd = $this->pdo->prepare("SELECT FROM comentarios WHERE id = :id_com AND fk_id_usuario == :id_user");
+            $cmd->bindValue(":id_com", $id_comentario);
+            $cmd->bindValue(":id_user", $id_usuario);
+            $cmd->execute();
+
+        }
+    }
 }
 
 
