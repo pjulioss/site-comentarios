@@ -1,5 +1,4 @@
 <?php 
-
 //Caso não exista a sessão do administrador, redirecione para a pagina principal
 session_start();
 if(!$_SESSION['id_master'])
@@ -7,6 +6,10 @@ if(!$_SESSION['id_master'])
     header("location:index.php");
 }
 
+require_once "Classes/Usuarios.php";
+
+$use = new Usuarios("site_comentarios", "localhost","root", "" );
+$dados = $use->buscarTodosUsuarios();
 
 ; ?>
 
@@ -34,30 +37,25 @@ if(!$_SESSION['id_master'])
             <td>Email</td>
             <td>Comentários</td>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Ana Clara</td>
-            <td>ana@email.com</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Clarice Vilma</td>
-            <td>cla-vilma@email.com</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Pedro Júlio</td>
-            <td>pjulio@email.com</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Fernando Santos</td>
-            <td>fsantos@email.com</td>
-            <td>8</td>
-        </tr>
+    <?php 
+        if(count($dados)> 0)
+        {
+            foreach($dados as $value)
+            { ?>
+                <tr>
+                    <td><?= $value['id']?></td>
+                    <td><?= $value['nome']?></td>
+                    <td><?= $value['email']?></td>
+                    <td><?= $value['quantidade']?></td>
+                </tr>
+    <?php  }
+        } else {
+            echo "Ainda não há usuários cadastrados!";
+        }
+    ; ?>
+        
+
+
     </table>
 </body>
 </html>

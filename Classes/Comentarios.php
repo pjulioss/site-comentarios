@@ -1,5 +1,8 @@
 <?php 
 
+//Definindo uma timezone padrão
+date_default_timezone_set('America/Sao_Paulo');
+
 class Comentarios
 {
     private $pdo;
@@ -39,6 +42,19 @@ class Comentarios
             $cmd->execute();
 
         }
+    }
+
+    public function inserirComentario($id_pessoa, $comentario)
+    {
+        //() primeiro vem as colunas () depois os valores
+        $cmd = $this->pdo->prepare("INSERT INTO comentarios (comentarios, dia, horario, fk_id_usuario) 
+        VALUES (:com, :dia, :hora,:fk_user)");
+
+        $cmd->bindValue(":com", $comentario);
+        $cmd->bindValue(":dia", date('Y-m-d'));
+        $cmd->bindValue(":hora", date('H:i'));
+        $cmd->bindValue(":fk_user",$id_pessoa);
+        $cmd->execute();
     }
 }
 

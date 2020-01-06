@@ -113,7 +113,26 @@ input[type=submit]{
     display: block;
     float: right;
     margin-right: 30px;
+    margin-bottom: 20px;
 }
+
+#coment{
+    font-family: 'Arial';
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+    height: 20px;
+    background-color:#44A1A0;
+    border: 2px solid #44A1A0;
+    color: rgba(245, 245, 241, 0.938);
+    cursor: pointer;
+    display: block;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
 
 input[type=submit]:hover{
     background-color: #44A1A0;
