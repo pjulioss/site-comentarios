@@ -5,7 +5,8 @@ ob_start(); //serve para ligar com o erro de header already sent
 <?php
     session_start();
     require_once "Classes/Comentarios.php";
-    $com = new Comentarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+    // $com = new Comentarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+    $com = new Comentarios("epiz_25033836_sitecomentarios", "sql200.epizy.com", "epiz_25033836", "QBZbj5b5sF5T");
     $coments = $com->buscarComentarios();
 ;?>
 

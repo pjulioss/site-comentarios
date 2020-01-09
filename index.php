@@ -3,12 +3,14 @@
     session_start();
     if(isset($_SESSION['id_usuario']))
     {
-        $use = new Usuarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+        // $use = new Usuarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+        $use = new Usuarios("epiz_25033836_sitecomentarios", "sql200.epizy.com", "epiz_25033836", "QBZbj5b5sF5T");
         $infoUsuario = $use->buscarDadosUser($_SESSION['id_usuario']);
         
     } elseif(isset($_SESSION['id_master'])) 
     {
-        $use = new Usuarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+        // $use = new Usuarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+        $use = new Usuarios("epiz_25033836_sitecomentarios", "sql200.epizy.com", "epiz_25033836", "QBZbj5b5sF5T");
         $infoUsuario = $use->buscarDadosUser($_SESSION['id_master']);
 
     }

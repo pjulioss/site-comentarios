@@ -8,7 +8,8 @@ if(!$_SESSION['id_master'])
 
 require_once "Classes/Usuarios.php";
 
-$use = new Usuarios("site_comentarios", "localhost","root", "" );
+// $use = new Usuarios("site_comentarios", "localhost","root", "" );
+$use = new Usuarios("epiz_25033836_sitecomentarios", "sql200.epizy.com", "epiz_25033836", "QBZbj5b5sF5T");
 $dados = $use->buscarTodosUsuarios();
 
 ; ?>

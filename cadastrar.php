@@ -36,7 +36,8 @@ if(isset($_POST['nome']))
 
     if($senha == $confSenha)
     {
-        $use = new Usuarios("site_comentarios", "localhost","root", "" );
+        $use = new Usuarios("epiz_25033836_sitecomentarios", "sql200.epizy.com", "epiz_25033836", "QBZbj5b5sF5T");
+        // $use = new Usuarios("site_comentarios", "localhost","root", "" );
         if($use->cadastrar($nome, $email, $senha))
         { ?>
              <div class="msgOk">

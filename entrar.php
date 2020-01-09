@@ -30,7 +30,8 @@ if(isset($_POST['email']))
     $senha = htmlentities(addslashes($_POST['senha']));
 
     require_once "Classes/Usuarios.php"; //relacionando a classe
-    $use = new Usuarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+    // $use = new Usuarios("site_comentarios", "localhost","root", "" ); //instanciando objeto
+    $use = new Usuarios("epiz_25033836_sitecomentarios", "sql200.epizy.com", "epiz_25033836", "QBZbj5b5sF5T");
     if($use->entrar($email, $senha))
     {
         header("location:index.php");//usuario logou
