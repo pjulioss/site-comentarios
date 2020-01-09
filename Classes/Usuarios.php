@@ -22,12 +22,12 @@ class Usuarios
         $cmd->bindValue(":email", $email);
         $cmd->execute();
 
-        if($cmd->rowCount()> 0)//veio um id
+        if($cmd->rowCount()> 0)//veio um id então o usuario já existe
         {
-            return false;
+            return false; //não foi gravada a informação no banco
         } else {
-            //cadastrar
-            $cmd = $this->pdo->prepare("INSERT INTO usuarios (nome, email, senha) values(:n, :e, :s)");
+            //cadastrar o usuario caso o email não exista no banco
+            $cmd = $this->pdo->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (:n, :e, :s)");
             $cmd->bindValue(":n", $nome);
             $cmd->bindValue(":e", $email);
             $cmd->bindValue(":s", md5($senha));
